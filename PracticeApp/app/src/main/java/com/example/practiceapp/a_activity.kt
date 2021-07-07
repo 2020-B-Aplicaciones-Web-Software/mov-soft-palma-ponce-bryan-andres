@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.practiceapp.R
+import com.example.practiceapp.b_activity
 
 class a_activity : AppCompatActivity() {
     var numero = 0
@@ -21,6 +22,10 @@ class a_activity : AppCompatActivity() {
             aumentarNumero()
             actualizarEnPantalla()
         }
+
+
+
+
 
     }
 
