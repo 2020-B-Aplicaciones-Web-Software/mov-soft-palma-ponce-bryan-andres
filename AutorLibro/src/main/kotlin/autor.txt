@@ -1,0 +1,7 @@
+1,Gabriel,García,Colombia,1927-03-06
+2,Mario,Vargaas,Peru,1930-02-02
+3,Pedro,Perez,Ecuador,1950-02-01
+4,Jauna,Lopez,Peru,2000-03-20
+5,Juana,perez,si,1990-10-10
+6,Andres,Palma,Ecuador,2000-06-26
+7,Andres,PAlma,Ecuador,2000-06-26
