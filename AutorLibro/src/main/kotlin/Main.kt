@@ -7,7 +7,8 @@ var activo = true
 val gestorAutor = AutorArchivo()
 val gestorLibro = LibroArchivo()
 val scanner = Scanner(System.`in`)
-
+val headerLibro="N°\tTítulo\t\t\t\t\t\tAutor\t\t\tPrecio\t\tN° de Pags\t\tDisponibilidad\n"
+val headerAutor="N°\tNombre\t\tApellido\t\tPais\t\tFecha de nacimiento\n"
 fun main() {
     var opcion = "0"
     println(
@@ -63,6 +64,7 @@ fun menuLibro() {
     var autor: Autor
     var id: Int
     var libro: Libro
+    print(headerLibro)
     gestorLibro.verLibros().forEach { print(it) }
     println(
         "Seleccione la accion a realizar:\n" +
@@ -106,6 +108,7 @@ fun menuLibro() {
                 } else {
                     println("Error al añadir")
                 }
+                print(headerLibro)
                 gestorLibro.verLibros().forEach { print(it) }
                 "Seleccione la accion a realizar:\n" +
                         "1. Agregar\n" +
@@ -117,6 +120,7 @@ fun menuLibro() {
             }
             ("2") -> {
                 println("Seleccione el libro a actualizar (presione 0 para cancelar): ")
+                print(headerLibro)
                 gestorLibro.verLibros().forEach { print(it) }
                 id = scanner.nextInt()
                 if (id != 0) {
@@ -152,6 +156,7 @@ fun menuLibro() {
                     } else {
                         println("Error al añadir")
                     }
+                    print(headerLibro)
                     gestorLibro.verLibros().forEach { print(it) }
                 }
 
@@ -166,6 +171,7 @@ fun menuLibro() {
             }
             ("3") -> {
                 println("Seleccione el libro a eliminar")
+                print(headerLibro)
                 gestorLibro.verLibros().forEach { print(it) }
                 id = scanner.nextInt()
                 if (gestorLibro.eliminarLibro(id)) {
@@ -173,6 +179,7 @@ fun menuLibro() {
                 } else {
                     println("Error al eliminar")
                 }
+                print(headerLibro)
                 gestorLibro.verLibros().forEach { print(it) }
                 println(
                     "Seleccione la accion a realizar:\n" +
@@ -199,6 +206,7 @@ fun menuAutor() {
     var apellido: String
     var pais: String
     var fecha: LocalDate
+    print(headerAutor)
     gestorAutor.verAutores().forEach { print(it) }
     println(
         "Seleccione la accion a realizar:\n" +
@@ -232,6 +240,7 @@ fun menuAutor() {
                 ) {
 
                     println("Autor actualizado exitosamente")
+                    print(headerAutor)
                     gestorAutor.verAutores().forEach { print(it) }
                 } else {
                     println("Error al actualizar")
@@ -249,10 +258,12 @@ fun menuAutor() {
             }
             ("2") -> {
                 println("Seleccione el autor a actualizar (presione 0 para cancelar): ")
+                print(headerAutor)
                 gestorAutor.verAutores().forEach { print(it) }
                 id = scanner.nextInt()
                 if (id != 0) {
                     println("Ingrese el nuevo nombre del autor: ")
+                    nombre = scanner.nextLine()
                     nombre = scanner.nextLine()
                     println("Ingrese el nuevo apellido del autor: ")
                     apellido = scanner.nextLine()
@@ -263,7 +274,7 @@ fun menuAutor() {
                     if (gestorAutor.actualizarAutor(
                             id,
                             Autor(
-                                gestorAutor.verAutores().last().getID()?.plus(1),
+                                id,
                                 nombre,
                                 apellido,
                                 pais,
@@ -271,12 +282,14 @@ fun menuAutor() {
                             )
                         )
                     ) {
-                        println("Autor actualizado exitosamente")
+                        println("Autor actualizado exitosamente\n")
+                        print(headerAutor)
                         gestorAutor.verAutores().forEach { print(it) }
                     } else {
                         println("Error al actualizar")
                     }
                 }
+                print(headerAutor)
                 gestorAutor.verAutores().forEach { print(it) }
 
                 println(
@@ -291,6 +304,7 @@ fun menuAutor() {
             }
             ("3") -> {
                 println("Seleccione el autor a eliminar")
+                print(headerAutor)
                 gestorAutor.verAutores().forEach { print(it) }
                 id = scanner.nextInt()
                 if (gestorAutor.eliminarAutor(id)) {
@@ -298,6 +312,7 @@ fun menuAutor() {
                 } else {
                     println("Error al eliminar")
                 }
+                print(headerAutor)
                 gestorAutor.verAutores().forEach { print(it) }
                 println(
                     "Seleccione la accion a realizar:\n" +
@@ -311,6 +326,7 @@ fun menuAutor() {
             }
             ("4") -> {
                 println("Seleccione el autor a visualizar")
+                print(headerAutor)
                 gestorAutor.verAutores().forEach { print(it) }
                 id = scanner.nextInt()
                 gestorLibro.bucarLibrosPorAutor(id).forEach {

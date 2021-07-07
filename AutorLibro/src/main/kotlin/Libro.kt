@@ -38,12 +38,25 @@ class Libro(
     }
 
     override fun toString(): String {
+        val disp:String
+        if (disponible != null){
+            if (disponible as Boolean){
+                disp="Disponible"
+            }
+            else{
+                disp="Disponible"
+            }
+
+        }
+        else{
+            disp="No Disponible"
+        }
         return "${id_libro}\t" +
                 "${titulo_libro}\t\t" +
-                "${autor?.getNombre() +" "+ autor?.getApellido()}\t\t" +
+                "${autor?.getNombre() +" "+ autor?.getApellido()}\t" +
                 "${precio}\t\t" +
-                "${num_paginas}\t\t" +
-                "${disponible}\n"
+                "${num_paginas}\t\t\t\t" +
+                "${disp}\n"
     }
      fun toFile(): String {
         return "${id_libro}," +

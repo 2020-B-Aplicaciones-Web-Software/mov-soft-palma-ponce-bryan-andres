@@ -55,9 +55,9 @@ class AutorArchivo {
             file.writeText("")
             autores.forEach {
                 if (it.getID() != id) {
-                    file.appendText(it.toFile())
+                    file.appendText(it.toFile() + "\n")
                 } else {
-                    file.appendText(autor.toFile())
+                    file.appendText(autor.toFile() + "\n")
                 }
             }
             true
@@ -74,7 +74,7 @@ class AutorArchivo {
             file.writeText("")
             autores.forEach {
                 if (it.getID() != id) {
-                    file.appendText(it.toFile())
+                    file.appendText(it.toFile() + "\n")
                 }
             }
             true
