@@ -44,7 +44,7 @@ class Libro(
                 disp="Disponible"
             }
             else{
-                disp="Disponible"
+                disp="No Disponible"
             }
 
         }

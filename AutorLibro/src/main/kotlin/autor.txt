@@ -1,6 +1,6 @@
-1,Gabriel,García,Colombia,1927-03-06
-2,Mario,Vargaas,Peru,1930-02-02
-3,Pedro,Perez,Ecuador,1950-02-01
-4,Juana,Lopez,Peru,2000-03-20
-5,Andres,Palma,Ecuador,2000-06-26
-6,Luis,Rodriguez,Brasil,1990-06-26
+1,Gabriel,Ponce,Chile,1957-03-06
+2,Mario,Vargas,Peru,1930-02-02
+3,Rodrigo,Perez,Ecuador,1950-02-01
+4,Teresa,Lopez,Peru,2000-03-20
+5,Bryan,Palma,Ecuador,2000-06-26
+6,Luis,Hidalgo,Brasil,1990-03-24

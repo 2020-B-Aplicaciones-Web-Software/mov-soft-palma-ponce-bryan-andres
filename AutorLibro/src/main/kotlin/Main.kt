@@ -8,7 +8,7 @@ val gestorAutor = AutorArchivo()
 val gestorLibro = LibroArchivo()
 val scanner = Scanner(System.`in`)
 val headerLibro="N°\tTítulo\t\t\t\t\t\tAutor\t\t\tPrecio\t\tN° de Pags\t\tDisponibilidad\n"
-val headerAutor="N°\tNombre\t\tApellido\t\tPais\t\tFecha de nacimiento\n"
+val headerAutor="N°\tNombre\t\tApellido\tPais\t\tFecha de nacimiento\n"
 fun main() {
     var opcion = "0"
     println(
@@ -126,6 +126,7 @@ fun menuLibro() {
                 if (id != 0) {
                     libro = gestorLibro.bucarLibroPorID(id)
                     print("Ingrese el nuevo Titulo del libro: ")
+                    nombre_libro = scanner.nextLine()
                     nombre_libro = scanner.nextLine()
                     println("Seleccione el  nuevo autor del libro: ")
                     gestorAutor.verAutores().forEach {

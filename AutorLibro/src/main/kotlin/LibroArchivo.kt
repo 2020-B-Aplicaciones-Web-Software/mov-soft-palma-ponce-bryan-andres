@@ -5,7 +5,7 @@ class LibroArchivo {
     val gestorAutor = AutorArchivo()
     fun crearLibro(libro: Libro): Boolean {
         val file = File(path)
-        file.appendText(libro.toFile() + "\n")
+        file.appendText(libro.toFile() )
         return true
     }
 
@@ -76,9 +76,9 @@ class LibroArchivo {
             file.writeText("")
             libros.forEach {
                 if (it.getID() != id) {
-                    file.appendText(it.toFile() + "\n")
+                    file.appendText(it.toFile() )
                 } else {
-                    file.appendText(libro.toFile() + "\n")
+                    file.appendText(libro.toFile() )
                 }
             }
             true
@@ -95,7 +95,7 @@ class LibroArchivo {
             file.writeText("")
             libroes.forEach {
                 if (it.getID() != id) {
-                    file.appendText(it.toFile() + "\n")
+                    file.appendText(it.toFile())
                 }
             }
             true

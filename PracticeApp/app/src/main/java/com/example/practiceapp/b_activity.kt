@@ -9,6 +9,7 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.ListView
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import java.util.*
 
@@ -35,16 +36,37 @@ class b_activity : AppCompatActivity() {
         //Se define la accion del boton
         val botonListView = findViewById<Button>(R.id.btn_ir_list_view_anadir)
         botonListView.setOnClickListener {
-            anadirItemsAlListView(BEntrenador("Carolina", "c@c.com"), arregloNumero, adaptador)
+            anadirItemsAlListView(
+                BEntrenador("Carolina", "c@c.com", null),
+                arregloNumero,
+                adaptador
+            )
         }
 
-        //listViewEjemplo
-        //     .setOnItemLongClickListener { adapterView, view, posicion, id ->
-        //         Log.i("list-view", "Dio click ${posicion}")
-        //         return@setOnItemLongClickListener true
-        //}
+        listViewEjemplo
+            .setOnItemLongClickListener { adapterView, view, posicion, id ->
+                Log.i("list-view", "Dio click ${posicion}")
+                val builder = AlertDialog.Builder(this)
+                builder.setTitle("Titulo")
 
-        registerForContextMenu(listViewEjemplo)
+                builder.setMessage("Mensaje")
+
+                builder.setPositiveButton(
+                    "Si"
+                ) { dialog, which ->
+                    Log.i("list-view", "Si")
+                }
+                builder.setNegativeButton(
+                    "No",
+                    null
+                )
+                val dialogo = builder.create()
+                dialogo.show()
+
+                return@setOnItemLongClickListener true
+            }
+
+// registerForContextMenu(listViewEjemplo)
     }
 
     override fun onCreateContextMenu(
@@ -59,7 +81,7 @@ class b_activity : AppCompatActivity() {
         val info = menuInfo as AdapterView.AdapterContextMenuInfo
         val id = info.position
         posicionSeleccionada = id
-        Log.i("List-View",posicionSeleccionada.toString())
+        Log.i("List-View", posicionSeleccionada.toString())
 
     }
 

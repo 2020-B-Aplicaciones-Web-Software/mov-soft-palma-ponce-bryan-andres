@@ -7,15 +7,15 @@ class BDMemoria {
         init{
             arregloEntrenador
                 .add(
-                    BEntrenador("Adrian","aaaa")
+                    BEntrenador("Adrian","aaaa",null)
                 )
             arregloEntrenador
                 .add(
-                    BEntrenador("Vicente","ccc")
+                    BEntrenador("Vicente","ccc",null)
                 )
             arregloEntrenador
                 .add(
-                    BEntrenador("Andres","bbb")
+                    BEntrenador("Andres","bbb",null)
                 )
         }
     }

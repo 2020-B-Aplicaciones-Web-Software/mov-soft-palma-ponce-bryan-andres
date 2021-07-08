@@ -1,3 +1,5 @@
-1,100 anios de soledad,1,30.24,300,true
-3,Historias de Accion+,2,30.45,222,true
-4,Chistes variados cortos,2,55.4,111,false
+1,Historias para niños,1,30.24,300,true
+2,Los juegos del hambre,2,30.45,222,true
+3,Chistes variados cortos,2,55.4,324,false
+4,Don Quijote dela mancha,3,32.4,128,true
+5,Autobiografía Vol. 1,4,19.4,433,false
