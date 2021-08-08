@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.practiceapp">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +12,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PracticeApp">
-        <activity android:name=".CIntentExplicitoParametros"></activity>
+        <activity android:name=".activity_http"></activity>
+        <activity android:name=".vista_libros2" />
+        <activity android:name=".GRecyclerView" />
+        <activity android:name=".actualizar_autor" />
+        <activity android:name=".formulario_autor" />
+        <activity android:name=".examen.vista_autor" />
+        <activity android:name=".CIntentExplicitoParametros" />
         <activity android:name="com.example.practica1moviles.a_activity" />
         <activity android:name=".b_activity">
             <intent-filter>

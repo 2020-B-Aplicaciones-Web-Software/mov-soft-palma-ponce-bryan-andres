@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".vista_actualizar_libro">
+
+    <Button
+        android:id="@+id/btn_cancelar_act_libro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="88dp"
+        android:text="Cancelar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.248"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_guardar_autor"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/label_act_sinopsis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:text="Sinopsis"
+        app:layout_constraintEnd_toEndOf="@+id/label_act_isbn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/label_act_isbn"
+        app:layout_constraintTop_toBottomOf="@+id/label_act_isbn" />
+
+    <EditText
+        android:id="@+id/act_sinopsis"
+        android:layout_width="344dp"
+        android:layout_height="146dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="@+id/label_act_sinopsis"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/label_act_sinopsis"
+        app:layout_constraintTop_toBottomOf="@+id/label_act_sinopsis"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/label_act_isbn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:text="ISBN"
+        app:layout_constraintEnd_toEndOf="@+id/label_act_titulo_libro"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/label_act_titulo_libro"
+        app:layout_constraintTop_toBottomOf="@+id/label_act_titulo_libro" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/act_isbn"
+        android:layout_width="221dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="104dp"
+        app:layout_constraintBottom_toBottomOf="@+id/label_act_isbn"
+        app:layout_constraintStart_toEndOf="@+id/label_act_isbn"
+        app:layout_constraintTop_toTopOf="@+id/label_act_isbn"
+        app:layout_constraintVertical_bias="0.69"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/label_act_titulo_libro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="Titulo del Libro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.212" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/act_titulo"
+        android:layout_width="212dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/label_act_titulo_libro"
+        app:layout_constraintStart_toEndOf="@+id/label_act_titulo_libro"
+        app:layout_constraintTop_toTopOf="@+id/label_act_titulo_libro"
+        app:layout_constraintVertical_bias="0.419"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btn_act_libro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:text="Actualizar"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_cancelar_act_libro"
+        app:layout_constraintStart_toEndOf="@+id/btn_cancelar_act_libro"
+        app:layout_constraintTop_toTopOf="@+id/btn_cancelar_act_libro"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Spinner
+        android:id="@+id/spinner_autores"
+        android:layout_width="225dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="80dp"
+        app:layout_constraintBottom_toBottomOf="@+id/label_act_autor"
+        app:layout_constraintStart_toEndOf="@+id/label_act_autor"
+        app:layout_constraintTop_toTopOf="@+id/label_act_autor"
+        app:layout_constraintVertical_bias="0.454"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/label_act_autor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/label_act_isbn"
+        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintStart_toStartOf="@+id/label_act_isbn"
+        app:layout_constraintTop_toBottomOf="@+id/label_act_isbn"
+        tools:text="Autor" />
+</androidx.constraintlayout.widget.ConstraintLayout>

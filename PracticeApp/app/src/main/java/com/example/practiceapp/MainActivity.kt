@@ -9,6 +9,7 @@ import android.util.Log
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.practica1moviles.a_activity
+import com.example.practiceapp.examen.vista_autor
 
 class MainActivity : AppCompatActivity() {
     val CODIGO_RESPUESTA_INTENT_EXPLICITO = 401
@@ -16,6 +17,17 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val btn_ir_autores = findViewById<Button>(
+            R.id.btn_trabajo_sql
+        )
+        btn_ir_autores.setOnClickListener {
+            val intentExplicito = Intent(
+                this,
+                vista_autor::class.java
+            )
+            startActivity(intentExplicito)
+        }
 
 
         val btn_ir_ciclo_vida = findViewById<Button>(
@@ -25,6 +37,22 @@ class MainActivity : AppCompatActivity() {
             abrirCicloVida(
                 a_activity::class.java
             )
+        }
+
+        val btn_ir_http = findViewById<Button>(
+            R.id.btn_ir_http
+        )
+        btn_ir_http.setOnClickListener {
+            abrirCicloVida(
+                activity_http::class.java
+            )
+        }
+
+        val btn_ir_recycler_view = findViewById<Button>(
+            R.id.btn_ir_recycler_view
+        )
+        btn_ir_recycler_view.setOnClickListener {
+            abrirActividadConParametros(GRecyclerView::class.java)
         }
 
         val btn_ir_ciclo_vida2 = findViewById<Button>(
@@ -84,7 +112,6 @@ class MainActivity : AppCompatActivity() {
         when (requestCode) {
             CODIGO_RESPUESTA_INTENT_EXPLICITO ->
                 if (resultCode == Activity.RESULT_OK) {
-
                     Log.i("intentE", "Datos actualizados")
                     if (data != null) {
                         val nombre = data.getStringExtra("NombreModificado")
@@ -94,7 +121,7 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             CODIGO_RESPUESTA_INTENT_IMPLICITO -> {
-                if (resultCode == RESULT_OK){
+                if (resultCode == RESULT_OK) {
                     if (data != null) {
                         val uri: Uri = data.data!!
                         val cursor = contentResolver.query(
@@ -127,7 +154,7 @@ class MainActivity : AppCompatActivity() {
     ) {
         val intentExplicito = Intent(
             this,
-            a_activity::class.java
+            clase
         )
         startActivity(intentExplicito)
     }

@@ -66,7 +66,7 @@ class b_activity : AppCompatActivity() {
                 return@setOnItemLongClickListener true
             }
 
-// registerForContextMenu(listViewEjemplo)
+ //registerForContextMenu(listViewEjemplo)
     }
 
     override fun onCreateContextMenu(
@@ -118,4 +118,5 @@ class b_activity : AppCompatActivity() {
         arreglo.add(valor)
         adaptador.notifyDataSetChanged()
     }
+
 }

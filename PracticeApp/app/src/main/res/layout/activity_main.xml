@@ -10,10 +10,10 @@
         android:id="@+id/btn_ir_list_view2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="44dp"
         android:text="List View"
         app:layout_constraintEnd_toEndOf="@+id/button1"
-        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintHorizontal_bias="0.357"
         app:layout_constraintStart_toStartOf="@+id/button1"
         app:layout_constraintTop_toBottomOf="@+id/button1" />
 
@@ -24,18 +24,19 @@
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.204" />
+        app:layout_constraintVertical_bias="0.108" />
 
     <Button
         android:id="@+id/btn_ir_intent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="53dp"
+        android:layout_marginTop="44dp"
         android:text="Ir Intent Explicito"
         app:layout_constraintEnd_toEndOf="@+id/btn_ir_list_view2"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="@+id/btn_ir_list_view2"
         app:layout_constraintTop_toBottomOf="@+id/btn_ir_list_view2" />
 
@@ -43,10 +44,43 @@
         android:id="@+id/btn_intent_implicito"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="67dp"
+        android:layout_marginTop="32dp"
         android:text="Ir Intent Implicito"
         app:layout_constraintEnd_toEndOf="@+id/btn_ir_intent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btn_ir_intent"
         app:layout_constraintTop_toBottomOf="@+id/btn_ir_intent" />
+
+    <Button
+        android:id="@+id/btn_trabajo_sql"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Autores"
+        app:layout_constraintEnd_toEndOf="@+id/btn_intent_implicito"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="@+id/btn_intent_implicito"
+        app:layout_constraintTop_toBottomOf="@+id/btn_intent_implicito" />
+
+    <Button
+        android:id="@+id/btn_ir_recycler_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Ir recycler view"
+        app:layout_constraintEnd_toEndOf="@+id/btn_trabajo_sql"
+        app:layout_constraintHorizontal_bias="0.608"
+        app:layout_constraintStart_toStartOf="@+id/btn_trabajo_sql"
+        app:layout_constraintTop_toBottomOf="@+id/btn_trabajo_sql" />
+
+    <Button
+        android:id="@+id/btn_ir_http"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Ir http"
+        app:layout_constraintEnd_toEndOf="@+id/btn_ir_recycler_view"
+        app:layout_constraintStart_toStartOf="@+id/btn_ir_recycler_view"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ir_recycler_view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".vista_actualizar_autor">
+
+    <Button
+        android:id="@+id/btn_actualizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="Actualizar"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_cancelar_act"
+        app:layout_constraintStart_toEndOf="@+id/btn_cancelar_act"
+        app:layout_constraintTop_toTopOf="@+id/btn_cancelar_act"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn_cancelar_act"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:text="Cancelar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.623" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/pais_autor_actualizar"
+        android:layout_width="208dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="28dp"
+        app:layout_constraintBottom_toBottomOf="@+id/label_pais_actualizar"
+        app:layout_constraintStart_toEndOf="@+id/label_pais_actualizar"
+        app:layout_constraintTop_toTopOf="@+id/label_pais_actualizar"
+        app:layout_constraintVertical_bias="0.482" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/fecha_autor_a"
+        android:layout_width="209dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/label_fecha_nac_actualizar"
+        app:layout_constraintStart_toEndOf="@+id/label_fecha_nac_actualizar"
+        app:layout_constraintTop_toTopOf="@+id/label_fecha_nac_actualizar"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/label_fecha_nac_actualizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Fecha de Nacimiento"
+        app:layout_constraintEnd_toEndOf="@+id/labe_actualizar_nombre_autor"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/labe_actualizar_nombre_autor"
+        app:layout_constraintTop_toBottomOf="@+id/labe_actualizar_nombre_autor" />
+
+    <TextView
+        android:id="@+id/labe_actualizar_nombre_autor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Nombre del Autor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.22" />
+
+    <TextView
+        android:id="@+id/label_pais_actualizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:text="Pais de Nacimiento"
+        app:layout_constraintEnd_toEndOf="@+id/label_fecha_nac_actualizar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/label_fecha_nac_actualizar"
+        app:layout_constraintTop_toBottomOf="@+id/label_fecha_nac_actualizar" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/nombre_autor_actualizar"
+        android:layout_width="207dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/labe_actualizar_nombre_autor"
+        app:layout_constraintStart_toEndOf="@+id/labe_actualizar_nombre_autor"
+        app:layout_constraintTop_toTopOf="@+id/labe_actualizar_nombre_autor"
+        app:layout_constraintVertical_bias="0.52" />
+</androidx.constraintlayout.widget.ConstraintLayout>

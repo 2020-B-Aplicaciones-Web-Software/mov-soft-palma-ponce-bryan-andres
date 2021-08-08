@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".vista_autor">
+
+    <TextView
+        android:id="@+id/label_nombre_autor"
+        android:layout_width="204dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="16dp"
+        android:text="null"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/label_lista_libros"
+        android:layout_width="204dp"
+        android:layout_height="27dp"
+        android:layout_marginBottom="8dp"
+        android:text="Sus obras:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lista_libros"
+        app:layout_constraintEnd_toEndOf="@+id/lista_libros"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/lista_libros" />
+
+    <TextView
+        android:id="@+id/label_fecha_nac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Fecha de Nacimiento:"
+        app:layout_constraintBottom_toTopOf="@+id/label_pais_nac"
+        app:layout_constraintEnd_toEndOf="@+id/label_pais_nac"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/label_pais_nac" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/label_pais_nac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="132dp"
+        android:text="País de Nacimiento:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.147" />
+
+    <TextView
+        android:id="@+id/fecha_nac"
+        android:layout_width="115dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="4dp"
+        android:text="null"
+        app:layout_constraintBottom_toBottomOf="@+id/label_fecha_nac"
+        app:layout_constraintStart_toEndOf="@+id/label_fecha_nac"
+        app:layout_constraintTop_toTopOf="@+id/label_fecha_nac"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/lugar_nac"
+        android:layout_width="107dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="60dp"
+        android:text="null"
+        app:layout_constraintBottom_toBottomOf="@+id/label_pais_nac"
+        app:layout_constraintStart_toEndOf="@+id/label_pais_nac"
+        app:layout_constraintTop_toTopOf="@+id/label_pais_nac"
+        app:layout_constraintVertical_bias="0.016" />
+
+    <ListView
+        android:id="@+id/lista_libros"
+        android:layout_width="347dp"
+        android:layout_height="410dp"
+        android:layout_marginTop="192dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.546"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_anadir_libro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        app:fabCustomSize="60dp"
+        app:layout_constraintEnd_toEndOf="@+id/lista_libros"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/lista_libros"
+        app:layout_constraintTop_toBottomOf="@+id/lista_libros"
+        app:srcCompat="@drawable/add_white_24dp"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/label_anadir_libro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="17dp"
+        android:text="Añadir libro"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_anadir_libro"
+        app:layout_constraintEnd_toStartOf="@+id/btn_anadir_libro"
+        app:layout_constraintTop_toTopOf="@+id/btn_anadir_libro" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
