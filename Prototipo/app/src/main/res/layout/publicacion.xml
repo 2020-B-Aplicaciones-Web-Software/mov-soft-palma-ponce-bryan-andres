@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="380dp"
+    android:layout_height="450dp">
+
+    <ImageView
+        android:id="@+id/prize_btn"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/share_label"
+        app:layout_constraintStart_toEndOf="@+id/share_label"
+        app:layout_constraintTop_toTopOf="@+id/share_label"
+        app:layout_constraintVertical_bias="0.562"
+        tools:srcCompat="@drawable/gift" />
+
+    <TextView
+        android:id="@+id/prize_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="Premiar"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/prize_btn"
+        app:layout_constraintStart_toEndOf="@+id/prize_btn"
+        app:layout_constraintTop_toTopOf="@+id/prize_btn" />
+
+    <ImageView
+        android:id="@+id/share_btn"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/comment_count"
+        app:layout_constraintStart_toEndOf="@+id/comment_count"
+        app:layout_constraintTop_toTopOf="@+id/comment_count"
+        app:layout_constraintVertical_bias="0.333"
+        tools:srcCompat="@drawable/share" />
+
+    <TextView
+        android:id="@+id/share_label"
+        android:layout_width="48dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="8dp"
+        android:text="Compartir"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/share_btn"
+        app:layout_constraintStart_toEndOf="@+id/share_btn"
+        app:layout_constraintTop_toTopOf="@+id/share_btn" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/subreddit_img"
+        android:layout_width="43dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/subreddit_3" />
+
+    <TextView
+        android:id="@+id/subreddit_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="r/teenagers"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/subreddit_img"
+        app:layout_constraintStart_toEndOf="@+id/subreddit_img"
+        app:layout_constraintTop_toTopOf="@+id/subreddit_img"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/post_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Publicado por u/User1 • 16h • i.redd.it"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/subreddit_name"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/subreddit_name"
+        app:layout_constraintTop_toBottomOf="@+id/subreddit_name" />
+
+    <ImageView
+        android:id="@+id/prizes_img"
+        android:layout_width="128dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/post_data"
+        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/post_data"
+        tools:srcCompat="@drawable/premios4" />
+
+    <TextView
+        android:id="@+id/prizes_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="150 Premios"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/prizes_img"
+        app:layout_constraintStart_toEndOf="@+id/prizes_img"
+        app:layout_constraintTop_toTopOf="@+id/prizes_img" />
+
+    <ImageView
+        android:id="@+id/more_menu"
+        android:layout_width="23dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.974"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/more" />
+
+    <TextView
+        android:id="@+id/post_name"
+        android:layout_width="365dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="4dp"
+        android:text="[OC] Top five causes of police officer deaths per year vs COVID 1825-2020"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.384"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prizes_img" />
+
+    <ImageView
+        android:id="@+id/post_img"
+        android:layout_width="372dp"
+        android:layout_height="222dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.434"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/post_name"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <ImageView
+        android:id="@+id/upvote_btn"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:srcCompat="@drawable/upvote" />
+
+    <TextView
+        android:id="@+id/vote_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="TextView"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/upvote_btn"
+        app:layout_constraintStart_toEndOf="@+id/upvote_btn"
+        app:layout_constraintTop_toTopOf="@+id/upvote_btn"
+        app:layout_constraintVertical_bias="0.357"
+        tools:text="1" />
+
+    <ImageView
+        android:id="@+id/downvote_btn"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/vote_count"
+        app:layout_constraintStart_toEndOf="@+id/vote_count"
+        app:layout_constraintTop_toTopOf="@+id/vote_count"
+        app:layout_constraintVertical_bias="0.428"
+        tools:srcCompat="@drawable/downvote" />
+
+    <ImageView
+        android:id="@+id/comment_btn"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/downvote_btn"
+        app:layout_constraintStart_toEndOf="@+id/downvote_btn"
+        app:layout_constraintTop_toTopOf="@+id/downvote_btn"
+        tools:srcCompat="@drawable/comment" />
+
+    <TextView
+        android:id="@+id/comment_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="5"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/comment_btn"
+        app:layout_constraintStart_toEndOf="@+id/comment_btn"
+        app:layout_constraintTop_toTopOf="@+id/comment_btn"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <ImageView
+        android:id="@+id/add_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/more_menu"
+        app:layout_constraintEnd_toStartOf="@+id/more_menu"
+        app:layout_constraintTop_toTopOf="@+id/more_menu"
+        app:srcCompat="@drawable/add" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

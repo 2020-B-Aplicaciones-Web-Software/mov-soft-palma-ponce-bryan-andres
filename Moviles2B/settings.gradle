@@ -1,0 +1,2 @@
+rootProject.name = "Moviles2B"
+include ':app'

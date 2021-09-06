@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".explore">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_explore"
+        android:layout_width="356dp"
+        android:layout_height="639dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomAppBar3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/search_bar3"
+        android:layout_width="265dp"
+        android:layout_height="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/user_icon3"
+        app:layout_constraintStart_toEndOf="@+id/user_icon3"
+        app:layout_constraintTop_toTopOf="@+id/user_icon3"
+        tools:srcCompat="@drawable/search" />
+
+    <ImageView
+        android:id="@+id/coin_icon3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/search_bar3"
+        app:layout_constraintStart_toEndOf="@+id/search_bar3"
+        app:layout_constraintTop_toTopOf="@+id/search_bar3"
+        app:layout_constraintVertical_bias="0.466"
+        tools:srcCompat="@drawable/coin" />
+
+    <ImageView
+        android:id="@+id/user_icon3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.02"
+        tools:srcCompat="@drawable/user" />
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar3"
+        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+        android:layout_width="400dp"
+        android:layout_height="55dp"
+        android:layout_gravity="bottom"
+        app:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/explore_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bottomAppBar3"
+        app:srcCompat="@drawable/active_explore" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

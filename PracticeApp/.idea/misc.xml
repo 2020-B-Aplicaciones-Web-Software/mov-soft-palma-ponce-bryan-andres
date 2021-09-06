@@ -3,8 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/SSd/Documents/GitKraken/mov-soft-palma-ponce-bryan-andres/PracticeApp/app/src/main/res/drawable/circle.xml" value="0.1" />
+        <entry key="..\:/Users/SSd/Documents/GitKraken/mov-soft-palma-ponce-bryan-andres/PracticeApp/app/src/main/res/drawable/img.xml" value="0.1" />
+        <entry key="..\:/Users/SSd/Documents/GitKraken/mov-soft-palma-ponce-bryan-andres/PracticeApp/app/src/main/res/layout/activity_g_recycler_view.xml" value="0.18115942028985507" />
         <entry key="..\:/Users/SSd/Documents/GitKraken/mov-soft-palma-ponce-bryan-andres/PracticeApp/app/src/main/res/layout/activity_http.xml" value="0.1" />
-        <entry key="..\:/Users/SSd/Documents/GitKraken/mov-soft-palma-ponce-bryan-andres/PracticeApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/SSd/Documents/GitKraken/mov-soft-palma-ponce-bryan-andres/PracticeApp/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/SSd/Documents/GitKraken/mov-soft-palma-ponce-bryan-andres/PracticeApp/app/src/main/res/layout/activity_test1.xml" value="0.1852355072463768" />
+        <entry key="..\:/Users/SSd/Documents/GitKraken/mov-soft-palma-ponce-bryan-andres/PracticeApp/app/src/main/res/layout/publicacion.xml" value="0.25" />
+        <entry key="..\:/Users/SSd/Documents/GitKraken/mov-soft-palma-ponce-bryan-andres/PracticeApp/app/src/main/res/layout/recycler_view_vista.xml" value="0.18115942028985507" />
       </map>
     </option>
   </component>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "438275861271",
+    "project_id": "movsoft-2021a-palpon",
+    "storage_bucket": "movsoft-2021a-palpon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:438275861271:android:34a5a6a233f48481be2552",
+        "android_client_info": {
+          "package_name": "com.example.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "438275861271-ei5t28sai5b1v3eabjb9jsukbk6m1me9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIEjspiMZ9XBwZ3E0pIubUTsnbSTsO79o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "438275861271-ei5t28sai5b1v3eabjb9jsukbk6m1me9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         val btn_ir_autores = findViewById<Button>(
             R.id.btn_trabajo_sql
         )
@@ -29,15 +30,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(intentExplicito)
         }
 
-
-        val btn_ir_ciclo_vida = findViewById<Button>(
-            R.id.button1
-        )
-        btn_ir_ciclo_vida.setOnClickListener {
-            abrirCicloVida(
-                a_activity::class.java
-            )
-        }
 
         val btn_ir_http = findViewById<Button>(
             R.id.btn_ir_http
