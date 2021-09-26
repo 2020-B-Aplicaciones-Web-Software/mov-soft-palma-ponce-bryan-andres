@@ -26,17 +26,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.141" />
+        app:layout_constraintVertical_bias="0.057" />
 
     <TextView
         android:id="@+id/label_isbn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="62dp"
         android:text="ISBN"
         app:layout_constraintEnd_toEndOf="@+id/label_titulo_libro"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/label_titulo_libro"
         app:layout_constraintTop_toBottomOf="@+id/label_titulo_libro" />
 
@@ -90,7 +90,7 @@
         android:id="@+id/label_sinopsis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="92dp"
         android:text="Sinopsis"
         app:layout_constraintEnd_toEndOf="@+id/label_isbn"
         app:layout_constraintHorizontal_bias="0.0"
@@ -101,7 +101,7 @@
         android:id="@+id/label_autor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="44dp"
         android:text="Autor"
         app:layout_constraintEnd_toEndOf="@+id/label_isbn"
         app:layout_constraintHorizontal_bias="0.0"
@@ -118,5 +118,44 @@
         app:layout_constraintStart_toEndOf="@+id/label_autor"
         app:layout_constraintTop_toTopOf="@+id/label_autor"
         app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/label_latitud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Latitud"
+        app:layout_constraintEnd_toEndOf="@+id/sinopsis"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/sinopsis"
+        app:layout_constraintTop_toBottomOf="@+id/sinopsis" />
+
+    <TextView
+        android:id="@+id/label_longitud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="Longitud"
+        app:layout_constraintEnd_toEndOf="@+id/label_latitud"
+        app:layout_constraintStart_toStartOf="@+id/label_latitud"
+        app:layout_constraintTop_toBottomOf="@+id/label_latitud" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/latitud_libro"
+        android:layout_width="288dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/label_latitud"
+        app:layout_constraintStart_toEndOf="@+id/label_latitud"
+        app:layout_constraintTop_toTopOf="@+id/label_latitud" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/longitud_libro"
+        android:layout_width="279dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="17dp"
+        app:layout_constraintBottom_toBottomOf="@+id/label_longitud"
+        app:layout_constraintStart_toEndOf="@+id/label_longitud"
+        app:layout_constraintTop_toTopOf="@+id/label_longitud" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

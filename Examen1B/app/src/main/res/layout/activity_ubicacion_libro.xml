@@ -6,4 +6,64 @@
     android:layout_height="match_parent"
     tools:context=".ubicacion_libro">
 
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="307dp"
+        android:layout_height="338dp"
+        android:layout_marginStart="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info_ubicacion"
+        app:layout_constraintVertical_bias="0.169"
+        tools:context=".MapsFragment" />
+
+    <TextView
+        android:id="@+id/label_ubicacion_libro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Libro:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.108"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titulo_libro_ubicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/label_ubicacion_libro"
+        app:layout_constraintStart_toEndOf="@+id/label_ubicacion_libro"
+        app:layout_constraintTop_toTopOf="@+id/label_ubicacion_libro"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/info_ubicacion"
+        android:layout_width="310dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="32dp"
+        android:text="Este libro puede ser encontrado en la siguiente ubicación:"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/label_ubicacion_libro"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/label_ubicacion_libro"
+        app:layout_constraintTop_toBottomOf="@+id/label_ubicacion_libro" />
+
+    <Button
+        android:id="@+id/btn_regresar_ubicación"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Regresar"
+        app:layout_constraintEnd_toEndOf="@+id/map"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/map"
+        app:layout_constraintTop_toBottomOf="@+id/map" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

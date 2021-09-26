@@ -4,9 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/SSd/Documents/GitKraken/mov-soft-palma-ponce-bryan-andres/Firebase2/app/src/main/res/layout/activity_cproducto.xml" value="0.1578125" />
-        <entry key="..\:/Users/SSd/Documents/GitKraken/mov-soft-palma-ponce-bryan-andres/Firebase2/app/src/main/res/layout/activity_drestaurante.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/SSd/Documents/GitKraken/mov-soft-palma-ponce-bryan-andres/Firebase2/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/SSd/Documents/GitKraken/mov-soft-palma-ponce-bryan-andres/Firebase2/app/src/main/res/layout/activity_pedido.xml" value="0.25" />
+        <entry key="..\:/Users/SSd/Documents/GitKraken/mov-soft-palma-ponce-bryan-andres/Firebase2/app/src/main/res/layout/activity_drestaurante.xml" value="0.25" />
+        <entry key="..\:/Users/SSd/Documents/GitKraken/mov-soft-palma-ponce-bryan-andres/Firebase2/app/src/main/res/layout/activity_fmaps.xml" value="0.22" />
+        <entry key="..\:/Users/SSd/Documents/GitKraken/mov-soft-palma-ponce-bryan-andres/Firebase2/app/src/main/res/layout/activity_main.xml" value="0.18309859154929578" />
+        <entry key="..\:/Users/SSd/Documents/GitKraken/mov-soft-palma-ponce-bryan-andres/Firebase2/app/src/main/res/layout/activity_pedido.xml" value="0.22" />
+        <entry key="..\:/Users/SSd/Documents/GitKraken/mov-soft-palma-ponce-bryan-andres/Firebase2/app/src/main/res/layout/fragment_maps.xml" value="0.1" />
         <entry key="..\:/Users/SSd/Documents/GitKraken/mov-soft-palma-ponce-bryan-andres/Firebase2/app/src/main/res/menu/menu_productos.xml" value="0.25" />
       </map>
     </option>

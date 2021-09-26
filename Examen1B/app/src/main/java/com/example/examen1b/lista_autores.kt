@@ -2,6 +2,7 @@ package com.example.examen1b
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.ContextMenu
 import android.view.MenuItem
 import android.view.View
@@ -10,12 +11,14 @@ import android.widget.ArrayAdapter
 import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 class lista_autores : AppCompatActivity() {
 
-    var autorBD = AutorBD(this)
     var id_seleccionado = -1
     val CODIGO_RESPUESTA_INTENT_EXPLICITO = 401
+    var arrayAutores = ArrayList<Autor>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +30,8 @@ class lista_autores : AppCompatActivity() {
         btn_anadir_autor.setOnClickListener {
             cambiarActividad(vista_crear_autor::class.java)
         }
+
+
     }
 
     override fun onResume() {
@@ -36,17 +41,31 @@ class lista_autores : AppCompatActivity() {
 
 
     fun mostrarAutoresListView() {
-        var arregloAutores = autorBD.verAutores()
-        //Creacion del adaptador
-        val adaptador = ArrayAdapter(
-            this, //contexto
-            android.R.layout.simple_list_item_1, //Se define el Layout
-            arregloAutores
-        )
-        //Se asigna el adaptador a la lista
-        val listViewAutores = findViewById<ListView>(R.id.list_view_autores)
-        registerForContextMenu(listViewAutores)
-        listViewAutores.adapter = adaptador
+        val db = Firebase.firestore
+        val collection = db.collection("autor")
+
+        val arregloAutores = ArrayList<Autor>()
+        collection.get()
+            .addOnSuccessListener { documents ->
+
+                for (document in documents) {
+                    val nombre = document.data.get("nombre").toString()
+                    val fecha = document.data.get("fecha").toString()
+                    val pais = document.data.get("pais").toString()
+                    arregloAutores.add(Autor( nombre, fecha, pais))
+                }
+                arrayAutores = arregloAutores
+                //Creacion del adaptador
+                val adaptador = ArrayAdapter(
+                    this, //contexto
+                    android.R.layout.simple_list_item_1, //Se define el Layout
+                    arrayAutores
+                )
+                //Se asigna el adaptador a la lista
+                val listViewAutores = findViewById<ListView>(R.id.list_view_autores)
+                registerForContextMenu(listViewAutores)
+                listViewAutores.adapter = adaptador
+            }
 
     }
 
@@ -65,22 +84,36 @@ class lista_autores : AppCompatActivity() {
         id_seleccionado = info.position
         //posicionSeleccionada = info.position
 
-
     }
 
     override fun onContextItemSelected(item: MenuItem): Boolean {
-        var arregloAutores = autorBD.verAutores()
         return when (item.itemId) {
             R.id.item_editar_autor -> {
+                mostrarAutoresListView()
                 irFormularioEditar()
                 return true
             }
             R.id.item_eliminar_autor -> {
-                autorBD.eliminarAutorFormulario(arregloAutores[id_seleccionado].autor_id)
+                val db = Firebase.firestore
+                val referenciaAutor = db
+                    .collection("autor")
+                    .whereEqualTo("nombre", arrayAutores[id_seleccionado].nombre_autor)
+                    .whereEqualTo("fecha", arrayAutores[id_seleccionado].fecha_nac)
+                    .whereEqualTo("pais", arrayAutores[id_seleccionado].pais_nac)
+                referenciaAutor
+                    .get()
+                    .addOnSuccessListener { result ->
+                        for (document in result) {
+                            val referencia_documento = db.collection("autor").document(document.id)
+                            referencia_documento.delete()
+                        }
+                        onResume()
+                    }
                 onResume()
                 return true
             }
             R.id.item_ver_autor -> {
+                mostrarAutoresListView()
                 irFormularioVistaAutor()
                 return true
             }
@@ -89,24 +122,22 @@ class lista_autores : AppCompatActivity() {
     }
 
     fun irFormularioEditar() {
-        var arregloAutores = autorBD.verAutores()
         val editarAutorForm = Intent(
             this,
             vista_actualizar_autor::class.java
         )
-        editarAutorForm.putExtra("autor", arregloAutores[id_seleccionado])
+        editarAutorForm.putExtra("autor", arrayAutores[id_seleccionado])
         startActivityForResult(editarAutorForm, CODIGO_RESPUESTA_INTENT_EXPLICITO)
 
     }
 
     fun irFormularioVistaAutor() {
-        var arregloAutores = autorBD.verAutores()
         val editarAutorForm = Intent(
             this,
             vista_autor::class.java
         )
-       editarAutorForm.putExtra("autor", arregloAutores[id_seleccionado])
-       startActivityForResult(editarAutorForm, CODIGO_RESPUESTA_INTENT_EXPLICITO)
+        editarAutorForm.putExtra("autor", arrayAutores[id_seleccionado])
+        startActivityForResult(editarAutorForm, CODIGO_RESPUESTA_INTENT_EXPLICITO)
 
     }
 

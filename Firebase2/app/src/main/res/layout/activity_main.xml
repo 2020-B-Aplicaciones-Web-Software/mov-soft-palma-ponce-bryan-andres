@@ -70,11 +70,11 @@
         android:id="@+id/btn_restaurante"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="24dp"
         android:text="Restaurante"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="@+id/btn_producto"
-        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintHorizontal_bias="0.392"
         app:layout_constraintStart_toStartOf="@+id/btn_producto"
         app:layout_constraintTop_toBottomOf="@+id/btn_producto" />
 
@@ -82,10 +82,24 @@
         android:id="@+id/btn_ir_pedido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:text="Button"
+        android:layout_marginTop="16dp"
+        android:text="Pedidos"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="@+id/btn_restaurante"
-        app:layout_constraintHorizontal_bias="0.583"
+        app:layout_constraintHorizontal_bias="0.363"
         app:layout_constraintStart_toStartOf="@+id/btn_restaurante"
         app:layout_constraintTop_toBottomOf="@+id/btn_restaurante" />
+
+    <Button
+        android:id="@+id/btn_ir_mapa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Ir mapa"
+        app:layout_constraintEnd_toEndOf="@+id/btn_ir_pedido"
+        app:layout_constraintStart_toStartOf="@+id/btn_ir_pedido"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ir_pedido" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

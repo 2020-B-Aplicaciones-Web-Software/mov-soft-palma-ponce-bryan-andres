@@ -24,7 +24,7 @@
         android:id="@+id/label_act_sinopsis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="100dp"
         android:text="Sinopsis"
         app:layout_constraintEnd_toEndOf="@+id/label_act_isbn"
         app:layout_constraintHorizontal_bias="0.0"
@@ -49,7 +49,7 @@
         android:id="@+id/label_act_isbn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="60dp"
         android:text="ISBN"
         app:layout_constraintEnd_toEndOf="@+id/label_act_titulo_libro"
         app:layout_constraintHorizontal_bias="0.0"
@@ -76,7 +76,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.212" />
+        app:layout_constraintVertical_bias="0.064" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/act_titulo"
@@ -104,7 +104,7 @@
         android:id="@+id/spinner_autores"
         android:layout_width="225dp"
         android:layout_height="52dp"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="92dp"
         app:layout_constraintBottom_toBottomOf="@+id/label_act_autor"
         app:layout_constraintStart_toEndOf="@+id/label_act_autor"
         app:layout_constraintTop_toTopOf="@+id/label_act_autor"
@@ -115,11 +115,54 @@
         android:id="@+id/label_act_autor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="44dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="@+id/label_act_isbn"
-        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/label_act_isbn"
         app:layout_constraintTop_toBottomOf="@+id/label_act_isbn"
         tools:text="Autor" />
+
+    <TextView
+        android:id="@+id/label_act_latitud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Latitud"
+        app:layout_constraintEnd_toEndOf="@+id/act_sinopsis"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/act_sinopsis"
+        app:layout_constraintTop_toBottomOf="@+id/act_sinopsis" />
+
+    <TextView
+        android:id="@+id/label_act_longitud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Longitud"
+        app:layout_constraintEnd_toEndOf="@+id/label_act_latitud"
+        app:layout_constraintStart_toStartOf="@+id/label_act_latitud"
+        app:layout_constraintTop_toBottomOf="@+id/label_act_latitud" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/act_latitud"
+        android:layout_width="270dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="32dp"
+        android:hint="hint"
+        app:layout_constraintBottom_toBottomOf="@+id/label_act_latitud"
+        app:layout_constraintStart_toEndOf="@+id/label_act_latitud"
+        app:layout_constraintTop_toTopOf="@+id/label_act_latitud"
+        app:layout_constraintVertical_bias="0.391" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/act_longitud"
+        android:layout_width="271dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="24dp"
+        android:hint="hint"
+        app:layout_constraintBottom_toBottomOf="@+id/label_act_longitud"
+        app:layout_constraintStart_toEndOf="@+id/label_act_longitud"
+        app:layout_constraintTop_toTopOf="@+id/label_act_longitud"
+        app:layout_constraintVertical_bias="0.375" />
 </androidx.constraintlayout.widget.ConstraintLayout>

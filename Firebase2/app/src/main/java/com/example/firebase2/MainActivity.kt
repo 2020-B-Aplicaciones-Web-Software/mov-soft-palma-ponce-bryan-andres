@@ -49,6 +49,20 @@ class MainActivity : AppCompatActivity() {
         botonRestaurante.setOnClickListener {
             irRestaurante()
         }
+
+        val botonMapa = findViewById<Button>(R.id.btn_ir_mapa)
+        botonMapa.setOnClickListener {
+            irMapa()
+        }
+
+    }
+
+    private fun irMapa() {
+        val intent = Intent(
+            this,
+            FMaps::class.java
+        )
+        startActivity(intent)
     }
 
     private fun abrirPedido() {
@@ -190,17 +204,25 @@ class MainActivity : AppCompatActivity() {
         val botonSalir = findViewById<Button>(R.id.btn_salir)
         val botonProducto = findViewById<Button>(R.id.btn_producto)
         val botonRestaurante = findViewById<Button>(R.id.btn_restaurante)
+        val botonPedido = findViewById<Button>(R.id.btn_ir_pedido)
+        val botonMapa=findViewById<Button>(R.id.btn_ir_mapa)
         if (DAuthUsuario.usuario != null) {
             textViewBienvenida.text = "Bienvenido ${DAuthUsuario.usuario?.email}"
             botonLogin.visibility = View.INVISIBLE
             botonSalir.visibility = View.VISIBLE
             botonProducto.visibility = View.VISIBLE
-            botonRestaurante.visibility=View.VISIBLE
+            botonRestaurante.visibility = View.VISIBLE
+            botonPedido.visibility = View.VISIBLE
+            botonMapa.visibility=View.VISIBLE
         } else {
             textViewBienvenida.text = "Ingresa al aplicativo"
             botonLogin.visibility = View.VISIBLE
             botonSalir.visibility = View.INVISIBLE
             botonProducto.visibility = View.INVISIBLE
+            botonRestaurante.visibility = View.INVISIBLE
+            botonPedido.visibility = View.INVISIBLE
+            botonMapa.visibility=View.INVISIBLE
+
         }
     }
 
