@@ -26,38 +26,6 @@ class vista_actualizar_libro : AdapterView.OnItemSelectedListener, AppCompatActi
 
 
         }
-        //se obtienen los valores de los autores para el spinner
-        val db = Firebase.firestore
-        val collection = db.collection("autor")
-        val arregloAutores = ArrayList<Autor>()
-        collection.get()
-            .addOnSuccessListener { documents ->
-
-                for (document in documents) {
-                    val nombre = document.data.get("nombre").toString()
-                    val fecha = document.data.get("fecha").toString()
-                    val pais = document.data.get("pais").toString()
-                    arregloAutores.add(Autor(nombre, fecha, pais))
-                }
-
-
-                val spinner = findViewById<Spinner>(R.id.spinner_autores)
-                val adapter = ArrayAdapter(
-                    this,
-                    android.R.layout.simple_spinner_item,
-                    arregloAutores
-                )
-                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-                spinner.adapter = adapter
-                spinner.onItemSelectedListener = this
-                arregloAutores.forEachIndexed { index, _ ->
-                    if (libro != null) {
-                        spinner.setSelection(index)
-                    }
-                }
-
-
-            }
 
         val toast = Toast.makeText(applicationContext, "nombre", Toast.LENGTH_SHORT)
 
@@ -77,9 +45,9 @@ class vista_actualizar_libro : AdapterView.OnItemSelectedListener, AppCompatActi
             val titulo = findViewById<TextInputEditText>(R.id.act_titulo).text.toString()
             val isbn = findViewById<TextInputEditText>(R.id.act_isbn).text.toString()
             val sinopsis = findViewById<EditText>(R.id.act_sinopsis).text.toString()
-            val latitud =
-                findViewById<TextInputEditText>(R.id.act_longitud).text.toString().toDouble()
             val longitud =
+                findViewById<TextInputEditText>(R.id.act_longitud).text.toString().toDouble()
+            val latitud =
                 findViewById<TextInputEditText>(R.id.act_latitud).text.toString().toDouble()
 
             val db = Firebase.firestore

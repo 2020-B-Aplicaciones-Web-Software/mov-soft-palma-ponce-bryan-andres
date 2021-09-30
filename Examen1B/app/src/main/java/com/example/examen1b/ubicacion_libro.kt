@@ -3,6 +3,7 @@ package com.example.examen1b
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -22,21 +23,10 @@ class ubicacion_libro : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ubicacion_libro)
         val libro = intent.getParcelableExtra<Libro>("libro")
-        val autor = intent.getParcelableExtra<Autor>("autor")
         if (libro != null) {
             findViewById<TextView>(R.id.titulo_libro_ubicacion).text = libro.titulo_libro
         }
         solicitarPermisos()
-        val btnRegresar = findViewById<Button>(R.id.btn_regresar_ubicación)
-        btnRegresar
-            .setOnClickListener {
-                val intentExplicito = Intent(
-                    this,
-                    vista_autor::class.java
-                )
-                intentExplicito.putExtra("autor", autor)
-                startActivityForResult(intentExplicito, CODIGO_RESPUESTA_INTENT_EXPLICITO)
-            }
         val fragmentoMapa = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
         fragmentoMapa.getMapAsync { googleMap ->
@@ -53,6 +43,7 @@ class ubicacion_libro : AppCompatActivity() {
             val titulo = libro?.titulo_libro
             val zoom = 17f
             if (ubicacionLibro != null && titulo != null) {
+                Log.d("mpa",ubicacionLibro.toString())
                 moverCamara(ubicacionLibro, zoom)
                 anadirMarcador(ubicacionLibro, titulo)
             }
